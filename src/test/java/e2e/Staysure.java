@@ -15,6 +15,9 @@ import java.util.List;
 
 public class Staysure extends BaseClass {
 
+    private static final String BASE_URL = "https://travelinsurance.staysure.co.uk/quote/policy-details";
+    private static final String BASE_URL_15 = "https://quote.staysure.co.uk";
+
     @DataProvider
     public Object[][] testData() throws FileNotFoundException {
         JsonElement jsonData = new JsonParser().parse(new FileReader("src/test/java/fixtures/test-data.json"));
@@ -30,6 +33,8 @@ public class Staysure extends BaseClass {
 
     @Test (dataProvider = "testData")
     public void quoteJourney(DataPOJO testData) {
+        page.navigate(BASE_URL);
+
         commonPageObjects.waitForTripPage();
         commonPageObjects.acceptAllCookies();
 

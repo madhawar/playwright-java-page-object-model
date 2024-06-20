@@ -9,14 +9,13 @@ import org.testng.annotations.BeforeMethod;
 import pages.CommonPageObjects;
 import pages.one.TripPage;
 
-
-
 public class BaseClass {
     private static final String BASE_URL = "https://travelinsurance.staysure.co.uk/quote/policy-details";
     private static final String BASE_URL_15 = "https://quote.staysure.co.uk";
 
     private Browser browser;
 
+    protected Page page;
     protected CommonPageObjects commonPageObjects;
     protected TripPage tripPage;
 
@@ -26,10 +25,8 @@ public class BaseClass {
                 .create()
                 .chromium()
                 .launch(new BrowserType.LaunchOptions().setHeadless(false));
-
-        Page page = browser.newPage();
+        page = browser.newPage();
         page.setViewportSize( 1920, 1080);
-        page.navigate(BASE_URL);
 
         tripPage = new TripPage(page);
         commonPageObjects = new CommonPageObjects(page);
@@ -39,6 +36,5 @@ public class BaseClass {
     public void tearDown(){
         browser.close();
     }
-
 
 }
