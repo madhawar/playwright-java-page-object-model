@@ -3,7 +3,12 @@
     {
       "typeOfCover": "ST",
       "cruiseCover": "NO",
-      "travellingFrom": "UK1"
+      "travellingFrom": "UK1",
+      "travellingTo": "France",
+      "departureDateLead": "14",
+      "returnDateLead": "28",
+      "coverFor": "INDIVIDUAL",
+      "travellerAge1": "30"
     }
   ]
 }

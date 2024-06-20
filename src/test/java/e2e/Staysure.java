@@ -33,14 +33,18 @@ public class Staysure extends BaseClass {
 
     @Test (dataProvider = "testData")
     public void quoteJourney(DataPOJO testData) {
-        page.navigate(BASE_URL);
-
+        commonPageObjects.navigateTo(BASE_URL);
         commonPageObjects.waitForTripPage();
         commonPageObjects.acceptAllCookies();
 
         tripPage.selectTypeOfCover(testData.getTypeOfCover());
         tripPage.selectCruiseCover(testData.getCruiseCover());
         tripPage.selectTravellingFrom(testData.getTravellingFrom());
+        tripPage.enterTravelDestination(testData.getTravellingTo());
+        tripPage.enterDepartureDate(testData.getDepartureDateLead());
+        tripPage.enterReturnDate(testData.getReturnDateLead());
+        tripPage.selectCoverFor(testData.getCoverFor());
+        tripPage.enterTravellerAges(testData.getTravellerAge1());
     }
 
 }

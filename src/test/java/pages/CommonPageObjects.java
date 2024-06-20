@@ -20,6 +20,10 @@ public class CommonPageObjects {
         this.manageCookies = page.locator("//button[@id='onetrust-pc-btn-handler']");
     }
 
+    public void navigateTo(String BASE_URL) {
+        page.navigate(BASE_URL);
+    }
+
     public void waitForTripPage() {
         assertThat(page).hasTitle(TRIP_PAGE_TITLE);
     }
