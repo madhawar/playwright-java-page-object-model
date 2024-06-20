@@ -13,6 +13,7 @@ import pages.one.TripPage;
 
 public class BaseClass {
     private static final String BASE_URL = "https://travelinsurance.staysure.co.uk/quote/policy-details";
+    private static final String BASE_URL_15 = "https://quote.staysure.co.uk";
 
     private Browser browser;
 

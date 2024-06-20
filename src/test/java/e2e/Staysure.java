@@ -7,7 +7,7 @@ import com.google.gson.JsonParser;
 import com.google.gson.reflect.TypeToken;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import fixtures.DataPOJO;
+import support.DataPOJO;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
