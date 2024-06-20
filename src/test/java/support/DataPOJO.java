@@ -1,5 +1,7 @@
 package support;
 
+import java.util.List;
+
 public class DataPOJO {
 
     private String typeOfCover;
@@ -9,7 +11,14 @@ public class DataPOJO {
     private String departureDateLead;
     private String returnDateLead;
     private String coverFor;
-    private String travellerAge1;
+    private Organiser organiser;
+    private String title;
+    private String firstName;
+    private String lastName;
+    private String emailAddress;
+    private String telephoneNumber;
+    private String postCode;
+    private Travellers travellers;
 
     public String getTypeOfCover() {
         return typeOfCover;
@@ -31,7 +40,35 @@ public class DataPOJO {
 
     public String getCoverFor() { return coverFor; }
 
-    public String getTravellerAge1() {
-        return travellerAge1;
+    public static class Travellers {
+        private List<String> age;
+
+        public List<String> getAge() {
+            return age;
+        }
+
+//        public void setAge(List<String> age) {
+//            this.age = age;
+//        }
     }
+
+    public Travellers getTravellers() {
+        return travellers;
+    }
+
+    public Organiser getOrganiser() {
+        return organiser;
+    }
+
+    public void setOrganiser(Organiser organiser) {
+        this.organiser = organiser;
+    }
+
+//    public String getTitle() { return  title; }
+//    public String getFirstName() { return  firstName; }
+//    public String getLastName() { return  lastName; }
+//    public String getEmailAddress() { return  emailAddress; }
+//    public String getTelephoneNumber() { return  telephoneNumber; }
+//    public String getPostCode() { return  postCode; }
+
 }

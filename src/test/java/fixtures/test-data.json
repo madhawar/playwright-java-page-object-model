@@ -7,8 +7,18 @@
       "travellingTo": "France",
       "departureDateLead": "14",
       "returnDateLead": "28",
-      "coverFor": "INDIVIDUAL",
-      "travellerAge1": "30"
+      "coverFor": "COUPLE",
+      "travellers": {
+        "age": ["30", "25"]
+      },
+      "organiser": {
+        "title": "Mr",
+        "firstName": "Madhawa",
+        "lastName": "Ratnayake",
+        "emailAddress": "madhawa@intervest.lk",
+        "telephoneNumber": "0771257025",
+        "postCode": "NN47YB"
+      }
     }
   ]
 }

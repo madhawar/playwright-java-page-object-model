@@ -2,6 +2,7 @@ package pages;
 
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
+import support.Log;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 
@@ -22,10 +23,7 @@ public class CommonPageObjects {
 
     public void navigateTo(String BASE_URL) {
         page.navigate(BASE_URL);
-    }
-
-    public void waitForTripPage() {
-        assertThat(page).hasTitle(TRIP_PAGE_TITLE);
+        Log.info("[TRIP] Navigated to: " + BASE_URL);
     }
 
     public void acceptAllCookies() {

@@ -7,6 +7,7 @@ import com.microsoft.playwright.Playwright;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import pages.CommonPageObjects;
+import pages.one.TravellersPage;
 import pages.one.TripPage;
 
 public class BaseClass {
@@ -18,6 +19,7 @@ public class BaseClass {
     protected Page page;
     protected CommonPageObjects commonPageObjects;
     protected TripPage tripPage;
+    protected TravellersPage travellersPage;
 
     @BeforeMethod
     public void setUp(){
@@ -28,8 +30,9 @@ public class BaseClass {
         page = browser.newPage();
         page.setViewportSize( 1920, 1080);
 
-        tripPage = new TripPage(page);
         commonPageObjects = new CommonPageObjects(page);
+        tripPage = new TripPage(page);
+        travellersPage = new TravellersPage(page);
     }
 
     @AfterMethod
